@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CinémaCritique.AppliWinForms/CinémaCritique.AppliWinForms.csproj" />
+  <Project Path="CinémaCritique.DLL/CinémaCritique.DLL.csproj" />
+</Solution>
