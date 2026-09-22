@@ -16,7 +16,9 @@ namespace CinémaCritique.AppliWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+
+            Acteur acteur = new Acteur("Jake", "Gyllenhaal", "19/12/1980", "Américain", "Masculin", "Nightcrawler");
         }
     }
 }
