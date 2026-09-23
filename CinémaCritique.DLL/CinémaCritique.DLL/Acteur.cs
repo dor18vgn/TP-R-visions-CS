@@ -5,7 +5,7 @@
         #region Champs Privées
         private string _nom = "inconnu";
         private string _prenom = "inconnu";
-        private string _dateNaissance = "inconnu";
+        private DateTime _dateNaissance = DateTime.Now;
         private string _nationalite = "inconnu";
         private string _sexe = "inconnu";
         private List<Film> lesFilms = new List<Film>();
@@ -25,7 +25,7 @@
             set { _prenom = value; }
         }
 
-        public string dateNaissance
+        public DateTime dateNaissance
         {
             get { return _dateNaissance; }
             set { _dateNaissance = value; }
@@ -48,7 +48,7 @@
 
         #region Constructeurs
 
-        public Acteur(string nom, string prenom, string dateNaissance, string nationalite, string sexe, List<Film> lesFilms)
+        public Acteur(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, List<Film> lesFilms)
         {
             this._nom = nom;
             this._prenom = prenom;
@@ -83,12 +83,12 @@
             _prenom = prenom;
         }
 
-        public string GetDateNaissance()
+        public DateTime GetDateNaissance()
         {
             return _dateNaissance;
         }
 
-        public void SetDateNaissance(string dateNaissance)
+        public void SetDateNaissance(DateTime dateNaissance)
         {
             _dateNaissance = dateNaissance;
         }
@@ -112,25 +112,14 @@
             _sexe = sexe;
         }
 
-        public List<Film> GetLesFilms()
-        {
-            return lesFilms;
-        }
-
-        public void SetLesFilms(List<Film> lesFilms)
-        {
-            this.lesFilms = lesFilms;
-        }
-
-
         #endregion
 
         #region Méthodes
 
-        public void addFilm(Film film)
+        public void AddFilm(Film unFilm)
         {
-            if (film != null && !lesFilms.Contains(film))
-                lesFilms.Add(film);
+            if (lesFilms != null && !lesFilms.Contains(unFilm))
+                lesFilms.Add(unFilm);
         }
 
         #endregion

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CinémaCritique.DLL
 {
-    internal class Realisateurs
+    public class Realisateurs
     {
         #region Champs privés
 
