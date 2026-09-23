@@ -13,7 +13,6 @@
 
         #region Propriétés
 
-        #endregion
         public string nom
         {
             get { return _nom; }
@@ -44,15 +43,19 @@
             set { _sexe = value; }
         }
 
+
+        #endregion
+
         #region Constructeurs
 
-        public Acteur(string nom, string prenom, string dateNaissance, string nationalite, string sexe, string roleCulte)
+        public Acteur(string nom, string prenom, string dateNaissance, string nationalite, string sexe, List<Film> lesFilms)
         {
             this._nom = nom;
             this._prenom = prenom;
             this._dateNaissance = dateNaissance;
             this._nationalite = nationalite;
             this._sexe = sexe;
+            this.lesFilms = lesFilms;
         }
 
         
@@ -113,7 +116,12 @@
         {
             return lesFilms;
         }
-        
+
+        public void SetLesFilms(List<Film> lesFilms)
+        {
+            this.lesFilms = lesFilms;
+        }
+
 
         #endregion
 

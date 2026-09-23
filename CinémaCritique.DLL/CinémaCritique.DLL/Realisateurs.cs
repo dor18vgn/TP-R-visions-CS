@@ -150,6 +150,12 @@ namespace CinémaCritique.DLL
         #endregion
         #region Méthodes
 
+        public void AddFilm(Film film)
+        {
+            lesFilms.Add(film);
+        }
+
+
         #endregion
 
 
