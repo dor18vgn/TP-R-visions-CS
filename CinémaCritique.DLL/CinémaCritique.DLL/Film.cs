@@ -14,6 +14,7 @@ namespace CinémaCritique.DLL
         private GenreFilm genreFilm = GenreFilm.inconnu;
         private List<Acteur> lesActeurs = new List<Acteur>();
         private List<Realisateurs> lesRealisateurs = new List<Realisateurs>();
+        private float _note = 0;
         #endregion
         #region Propriétés
 
@@ -33,16 +34,23 @@ namespace CinémaCritique.DLL
             set { _nationalite = value; }
         }
 
+        public float note
+        {
+            get { return _note; }
+            set { _note = value; }
+        }
+
         #endregion
         #region Constructeurs
 
-        public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateurs> lesRealisateurs)
+        public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateurs> lesRealisateurs, float note)
         {
             this.nom = nom;
             this.dateCreation = dateCreation;
             this.nationalite = nationalite;
             this.lesActeurs = lesActeurs;
             this.lesRealisateurs = lesRealisateurs;
+            this.note = note;
         }
 
         #endregion
@@ -69,6 +77,10 @@ namespace CinémaCritique.DLL
         {
             return lesRealisateurs;
         }
+        public float getNote()
+        {
+            return _note;
+        }
         public void setNom(string nom)
         {
             this.nom = nom;
@@ -89,7 +101,10 @@ namespace CinémaCritique.DLL
         {
             this.lesRealisateurs = lesRealisateurs;
         }
-
+        public void setNote(float note)
+        {
+            this.note = note;
+        }
 
         #endregion
         #region Méthodes
@@ -98,6 +113,11 @@ namespace CinémaCritique.DLL
         {
             if (!lesActeurs.Contains(monActeur)) 
                      lesActeurs.Add(monActeur);
+        }
+        public void AddRealisateur(Realisateurs monRealisateur)
+        {
+            if (!lesRealisateurs.Contains(monRealisateur))
+                lesRealisateurs.Add(monRealisateur);
         }
 
         #endregion
