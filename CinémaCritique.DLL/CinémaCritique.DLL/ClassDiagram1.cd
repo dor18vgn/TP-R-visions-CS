@@ -6,9 +6,6 @@
       <HashCode>gSAIAAABAAAQMgAAAAAQIAACBAAAIAACECAAgAAQACI=</HashCode>
       <FileName>Acteur.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="lesFilms" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CinémaCritique.DLL.Realisateurs">
     <Position X="0.5" Y="0.5" Width="1.75" />
@@ -16,16 +13,13 @@
       <HashCode>AAEAIoAgCAAQIhAAACAAIAAAFCAQIgIAEAAIggEwAAI=</HashCode>
       <FileName>Realisateurs.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="lesFilms" />
-    </ShowAsCollectionAssociation>
   </Class>
-  <Enum Name="CinémaCritique.DLL.Film">
-    <Position X="3.75" Y="0.5" Width="3.5" />
+  <Class Name="CinémaCritique.DLL.Film">
+    <Position X="5.5" Y="1.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>VhzoMIYIxDlAiQrANlcFd0GRACSwAKggQBjDA5BAgNQ=</HashCode>
+      <HashCode>AAAgIIAACAAQAAIAAGAAIAAABAAACoAkAAAAgBAAAAA=</HashCode>
       <FileName>Film.cs</FileName>
     </TypeIdentifier>
-  </Enum>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
