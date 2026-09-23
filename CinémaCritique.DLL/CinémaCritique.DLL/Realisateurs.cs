@@ -14,6 +14,7 @@ namespace CinémaCritique.DLL
         private string _nationalite = "inconnu";
         private string _sexe = "inconnu";
         private string _consecration = "inconnu";
+        private List<Film> lesFilms = new List<Film>();
 
         #endregion
         #region Propriétés
@@ -54,8 +55,24 @@ namespace CinémaCritique.DLL
             set { _consecration = value; }
         }
 
+        public List<Film> LesFilms
+        {
+            get { return lesFilms; }
+            set { lesFilms = value; }
+        }
         #endregion
         #region Constructeurs
+
+        public Realisateurs(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, string consecration, List<Film> lesFilms)
+        {
+            this.nom = nom;
+            this.prenom = prenom;
+            this.dateNaissance = dateNaissance;
+            this.nationalite = nationalite;
+            this.sexe = sexe;
+            this.consecration = consecration;
+            this.lesFilms = lesFilms;
+        }
 
         #endregion
         #region Accesseurs (getteurs / setteurs)
@@ -90,6 +107,11 @@ namespace CinémaCritique.DLL
             return _consecration;
         }
 
+        public List<Film> getLesFilms()
+        {
+            return lesFilms;
+        }
+
         public void setNom(string nom)
         {
             this.nom = nom;
@@ -120,21 +142,13 @@ namespace CinémaCritique.DLL
             this.consecration = consecration;
         }
 
-        #endregion
-        #region Méthodes
-
-        public Realisateurs(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, string consecration)
+        public void setLesFilms(List<Film> lesFilms)
         {
-            this.nom = nom;
-            this.prenom = prenom;
-            this.dateNaissance = dateNaissance;
-            this.nationalite = nationalite;
-            this.sexe = sexe;
-            this.consecration = consecration;
-
+            this.lesFilms = lesFilms;
         }
 
-
+        #endregion
+        #region Méthodes
 
         #endregion
 
