@@ -27,6 +27,6 @@ namespace CinémaCritique.DLL
         Guerre,
         Historique,
         Crime,
-        Autre
+        inconnu
     }
 }
