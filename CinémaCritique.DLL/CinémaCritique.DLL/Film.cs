@@ -81,6 +81,7 @@ namespace CinémaCritique.DLL
         {
             return _note;
         }
+
         public void setNom(string nom)
         {
             this.nom = nom;
@@ -120,6 +121,17 @@ namespace CinémaCritique.DLL
                 lesRealisateurs.Add(monRealisateur);
         }
 
+        public override String ToString()
+        {
+            string description = "Nom : " + nom + "\nDate de création : " + dateCreation.ToString("dd/MM/yyyy") + "\nNationalité : " + nationalite;
+            description += "\nNote : " + note.ToString("0.0") + "/10\nActeurs : ";
+            foreach (Acteur acteur in lesActeurs)
+            {
+                description += "\n- " + acteur.GetNom() + " " + acteur.GetPrenom();
+            }
+            return description;
+
+        }
         #endregion
     }
 }
