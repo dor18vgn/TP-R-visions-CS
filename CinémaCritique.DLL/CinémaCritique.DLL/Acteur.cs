@@ -44,11 +44,6 @@
             set { _sexe = value; }
         }
 
-        public void AjouterFilm(Film film)
-        {
-            lesFilms.Add(film);
-        }
-
         #region Constructeurs
 
         public Acteur(string nom, string prenom, string dateNaissance, string nationalite, string sexe, string roleCulte)
@@ -124,8 +119,11 @@
 
         #region Méthodes
 
-        
+        public void AddFilm(Film film)
+        {
+            lesFilms.Add(film);
+        }
 
         #endregion
-        }
+    }
 }
