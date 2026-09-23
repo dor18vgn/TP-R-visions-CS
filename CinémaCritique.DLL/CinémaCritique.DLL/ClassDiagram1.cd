@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CinémaCritique.DLL.Acteur">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAQAAAAAAAABAAAAAAAAAAAgAAQAAI=</HashCode>
+      <FileName>Acteur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CinémaCritique.DLL.Realisateurs">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIoAgCAAQIAAAACAAIAAAFCAAIgIAEAAIggAwAAI=</HashCode>
+      <FileName>Realisateurs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CinémaCritique.DLL.Film">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VhzoMIYIxDlAiQrANlcFd0GRACSwAKggQBjDA5BAgNQ=</HashCode>
+      <FileName>Film.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
