@@ -127,9 +127,10 @@
 
         #region Méthodes
 
-        public void AddFilm(Film film)
+        public void addFilm(Film film)
         {
-            lesFilms.Add(film);
+            if (film != null && !lesFilms.Contains(film))
+                lesFilms.Add(film);
         }
 
         #endregion
