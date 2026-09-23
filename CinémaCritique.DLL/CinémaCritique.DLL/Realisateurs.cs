@@ -150,10 +150,14 @@ namespace CinémaCritique.DLL
         #endregion
         #region Méthodes
 
-        public void AddFilm(Film film)
+        public void AddFilm(Film monFilm)
         {
-            lesFilms.Add(film);
+            if (!lesFilms.Contains(monFilm))
+                lesFilms.Add(monFilm);
         }
+
+
+
 
 
         #endregion

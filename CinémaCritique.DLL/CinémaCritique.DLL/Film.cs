@@ -12,11 +12,8 @@ namespace CinémaCritique.DLL
         private DateTime _dateCreation = DateTime.Now;
         private string _nationalite = "inconnu";
         private GenreFilm genreFilm = GenreFilm.inconnu;
-        private string _realisateurnom = "inconnu";
-        private string _realisateurprenom = "inconnu";
-        private string _acteurnom = "inconnu";
-        private string _acteurprenom = "inconnu";
-
+        private List<Acteur> lesActeurs = new List<Acteur>();
+        private List<Realisateurs> lesRealisateurs = new List<Realisateurs>();
         #endregion
         #region Propriétés
 
@@ -39,11 +36,13 @@ namespace CinémaCritique.DLL
         #endregion
         #region Constructeurs
 
-        public Film(string nom, DateTime dateCreation, string nationalite)
+        public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateurs> lesRealisateurs)
         {
             this.nom = nom;
             this.dateCreation = dateCreation;
             this.nationalite = nationalite;
+            this.lesActeurs = lesActeurs;
+            this.lesRealisateurs = lesRealisateurs;
         }
 
         #endregion
@@ -62,6 +61,14 @@ namespace CinémaCritique.DLL
         {
             return _nationalite;
         }
+        public List<Acteur> getLesActeurs()
+        {
+            return lesActeurs;
+        }
+        public List<Realisateurs> getLesRealisateurs()
+        {
+            return lesRealisateurs;
+        }
         public void setNom(string nom)
         {
             this.nom = nom;
@@ -70,14 +77,28 @@ namespace CinémaCritique.DLL
         {
             this.dateCreation = dateCreation;
         }
-
         public void setNationalite(string nationalite)
         {
             this.nationalite = nationalite;
         }
+        public void setLesActeurs(List<Acteur> lesActeurs)
+        {
+            this.lesActeurs = lesActeurs;
+        }
+        public void setLesRealisateurs(List<Realisateurs> lesRealisateurs)
+        {
+            this.lesRealisateurs = lesRealisateurs;
+        }
+
 
         #endregion
         #region Méthodes
+
+        public void AddActeur(Acteur monActeur)
+        {
+            if (!lesActeurs.Contains(monActeur)) 
+                     lesActeurs.Add(monActeur);
+        }
 
         #endregion
     }
