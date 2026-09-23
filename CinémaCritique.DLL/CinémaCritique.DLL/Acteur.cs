@@ -8,7 +8,7 @@
         private string _dateNaissance = "inconnu";
         private string _nationalite = "inconnu";
         private string _sexe = "inconnu";
-        private string _roleCulte = "inconnu";
+        private List<Film> lesFilms = new List<Film>();
         #endregion
 
         #region Propriétés
@@ -44,10 +44,9 @@
             set { _sexe = value; }
         }
 
-        public string roleCulte
+        public void AjouterFilm(Film film)
         {
-            get { return _roleCulte; }
-            set { _roleCulte = value; }
+            lesFilms.Add(film);
         }
 
         #region Constructeurs
@@ -59,7 +58,6 @@
             this._dateNaissance = dateNaissance;
             this._nationalite = nationalite;
             this._sexe = sexe;
-            this._roleCulte = roleCulte;
         }
 
         
@@ -116,20 +114,18 @@
             _sexe = sexe;
         }
 
-        public string GetRoleCulte()
+        public List<Film> GetLesFilms()
         {
-            return _roleCulte;
+            return lesFilms;
         }
-
-        public void SetRoleCulte(string roleCulte)
-        {
-            _roleCulte = roleCulte;
-        }
+        
 
         #endregion
 
         #region Méthodes
 
+        
+
         #endregion
-    }
+        }
 }
