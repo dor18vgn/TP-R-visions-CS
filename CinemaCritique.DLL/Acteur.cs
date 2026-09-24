@@ -63,10 +63,10 @@ namespace CinémaCritique.DLL
             this.lesFilms = lesFilms;
             if (lesFilms != null)
             {
-                foreach (Film film in lesFilms)
+                foreach (Film unFilm in lesFilms)
                 {
-                    if (!film.getLesActeurs().Contains(this))
-                        film.AddActeur(this);
+                    if (!unFilm.getLesActeurs().Contains(this))
+                        unFilm.AddActeur(this);
                 }
             }
         }
