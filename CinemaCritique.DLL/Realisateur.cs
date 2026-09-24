@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CinémaCritique.DLL
 {
-    public class Realisateurs
+    public class Realisateur
     {
         #region Champs privés
 
@@ -63,7 +63,7 @@ namespace CinémaCritique.DLL
         #endregion
         #region Constructeurs
 
-        public Realisateurs(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, string consecration, List<Film> lesFilms)
+        public Realisateur(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, string consecration, List<Film> lesFilms)
         {
             this.nom = nom;
             this.prenom = prenom;

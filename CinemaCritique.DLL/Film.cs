@@ -13,7 +13,7 @@ namespace CinémaCritique.DLL
         private string _nationalite = "inconnu";
         private GenreFilm genreFilm = GenreFilm.inconnu;
         private List<Acteur> lesActeurs = new List<Acteur>();
-        private List<Realisateurs> lesRealisateurs = new List<Realisateurs>();
+        private List<Realisateur> lesRealisateurs = new List<Realisateur>();
         private float _note = 0;
         #endregion
         #region Propriétés
@@ -43,7 +43,7 @@ namespace CinémaCritique.DLL
         #endregion
         #region Constructeurs
 
-        public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateurs> lesRealisateurs, float note)
+        public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateur> lesRealisateurs, float note)
         {
             this.nom = nom;
             this.dateCreation = dateCreation;
@@ -73,7 +73,7 @@ namespace CinémaCritique.DLL
         {
             return lesActeurs;
         }
-        public List<Realisateurs> getLesRealisateurs()
+        public List<Realisateur> getLesRealisateurs()
         {
             return lesRealisateurs;
         }
@@ -98,7 +98,7 @@ namespace CinémaCritique.DLL
         {
             this.lesActeurs = lesActeurs;
         }
-        public void setLesRealisateurs(List<Realisateurs> lesRealisateurs)
+        public void setLesRealisateurs(List<Realisateur> lesRealisateurs)
         {
             this.lesRealisateurs = lesRealisateurs;
         }
@@ -115,7 +115,7 @@ namespace CinémaCritique.DLL
             if (!lesActeurs.Contains(monActeur)) 
                      lesActeurs.Add(monActeur);
         }
-        public void AddRealisateur(Realisateurs monRealisateur)
+        public void AddRealisateur(Realisateur monRealisateur)
         {
             if (!lesRealisateurs.Contains(monRealisateur))
                 lesRealisateurs.Add(monRealisateur);
