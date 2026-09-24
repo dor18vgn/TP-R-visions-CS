@@ -9,203 +9,201 @@ namespace CinemaCritique.DLL
     public enum Nationalite
     {
 
-        Etats_Unis,
+        Francais,
 
-        Inde,
+        Americain,
 
-        France,
+        Indien,
 
-        Japon,
+        Japonais,
 
-        Royaume_Uni,
+        Britannique,
 
-        Coree_du_Sud,
+        Sud_Coreen,
 
-        Italie,
+        Italien,
 
-        Allemagne,
+        Allemand,
 
-        Chine,
+        Chinois,
 
-        Espagne,
+        Espagnol,
 
-        Mexique,
+        Mexicain,
 
-        Canada,
+        Canadien,
 
-        Australie,
+        Australien,
 
-        Bresil,
+        Bresilien,
 
-        Argentine,
+        Argentin,
 
-        Hong_Kong,
+        Hongkongais,
 
-        Danemark,
+        Danois,
 
-        Suede,
+        Suedois,
 
-        Russie,
+        Russe,
 
-        Iran,
+        Iranien,
 
-        Egypte,
+        Egyptien,
 
-        Nigeria,
+        Nigerian,
 
-        Turquie,
+        Turc,
 
-        Pologne,
+        Polonais,
 
-        Belgique,
+        Belge,
 
         Suisse,
 
-        Autriche,
+        Autrichien,
 
-        Pays_Bas,
+        Neerlandais,
 
-        Norvege,
+        Norvegien,
 
-        Finlande,
+        Finlandais,
 
-        Irlande,
+        Irlandais,
 
-        Nouvelle_Zelande,
+        Neo_Zelandais,
 
-        Tchequie,
+        Tcheque,
 
-        Hongrie,
+        Hongrois,
 
-        Grece,
+        Grec,
 
-        Portugal,
+        Portugais,
 
-        Roumanie,
+        Roumain,
 
-        Ukraine,
+        Ukrainien,
 
-        Afrique_du_Sud,
+        Sud_Africain,
 
-        Maroc,
+        Marocain,
 
-        Algerie,
+        Algerien,
 
-        Tunisie,
+        Tunisien,
 
-        Senegal,
+        Senegalais,
 
-        Colombie,
+        Colombien,
 
-        Chili,
+        Chilien,
 
-        Perou,
+        Peruvien,
 
-        Venezuela,
+        Venezuelien,
 
-        Cuba,
+        Cubain,
 
-        Philippines,
+        Filipin,
 
-        Thailande,
+        Thailandais,
 
-        Indonesie,
+        Indonesien,
 
-        Vietnam,
+        Vietnamien,
 
-        Taiwan,
+        Taiwanais,
 
-        Singapour,
+        Singapourien,
 
-        Malaisie,
+        Malaisien,
 
-        Pakistan,
+        Pakistanais,
 
-        Bangladesh,
+        Bangladais,
 
-        Israel,
+        Israélien,
 
-        Liban,
+        Libanais,
 
-        Palestine,
+        Palestinien,
 
-        Jordanie,
+        Jordanien,
 
-        Arabie_Saoudite,
+        Saoudien,
 
-        Emirats_Arabes_Unis,
+        Emirati,
 
-        Irak,
+        Irakien,
 
-        Kazakhstan,
+        Kazakh,
 
-        Ouzbekistan,
+        Ouzbek,
 
-        Georgie,
+        Georgien,
 
-        Armenie,
+        Armenien,
 
-        Azerbaidjan,
+        Azerbaidjanais,
 
-        Islande,
+        Islandais,
 
-        Serbie,
+        Serbe,
 
-        Croatie,
+        Croate,
 
-        Bosnie_Herzegovine,
+        Bosnien,
 
-        Slovenie,
+        Slovene,
 
-        Macedoine_du_Nord,
+        Macedonien,
 
-        Bulgarie,
+        Bulgare,
 
-        Slovaquie,
+        Slovaque,
 
-        Estonie,
+        Estonien,
 
-        Lettonie,
+        Letton,
 
-        Lituanie,
+        Lituanien,
 
-        Liechtenstein,
+        Liechtensteinois,
 
-        Luxembourg,
+        Luxembourgeois,
 
-        Malte,
+        Maltais,
 
-        Chypre,
+        Chypriote,
 
-        Kenya,
+        Kényan,
 
-        Ghana,
+        Ghaneen,
 
-        Cote_d_Ivoire,
+        Ivoirien,
 
-        Cameroun,
+        Camerounais,
 
-        Ethiopie,
+        Ethiopien,
 
-        Zimbabwe,
+        Zimbabween,
 
-        Uruguay,
+        Uruguayen,
 
-        Bolivie,
+        Bolivien,
 
-        Paraguay,
+        Paraguayen,
 
-        Equateur,
+        Equatorien,
 
-        Costa_Rica,
+        Costaricien,
 
-        Jamaique,
+        Jamaiquain,
 
-        Albanie,
+        Albanais,
 
-        Bielorussie,
-
-        Guatemala,
+        Bielorusse,
 
         inconnu
 
