@@ -122,6 +122,16 @@
                 lesFilms.Add(unFilm);
         }
 
+        public override string ToString()
+        {
+            string description = this._nom + " " + this._prenom + " (" + this._dateNaissance.ToShortDateString() + ") - " + this._nationalite + " - " + this._sexe;
+            description += "\nFilms : ";
+            foreach (Film film in lesFilms)
+            {
+                description += "\n- " + film.getNom() + " (" + film.getDateCreation().Year + ")";
+            }
+            return description;
+        }
         #endregion
     }
 }
