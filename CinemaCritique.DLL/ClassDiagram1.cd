@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CinémaCritique.DLL.Acteur">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gSAIAAADAAAQMAAAAAAQIAACBAAAIAACECAAgAAQACI=</HashCode>
+      <FileName>Acteur.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="lesFilms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CinémaCritique.DLL.Realisateurs">
+    <Position X="0.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAIoAgCAAQIhAAACAAIAAAFCAQIgIAEAAIggEwAAI=</HashCode>
+      <FileName>Realisateurs.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="lesFilms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CinémaCritique.DLL.Film">
+    <Position X="5.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAwIIAgCAAwAAAAAEAAIAAAJAAAGpAEAAECiAAQAAE=</HashCode>
+      <FileName>Film.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="genreFilm" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="lesRealisateurs" />
+      <Field Name="lesActeurs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="CinémaCritique.DLL.GenreFilm">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAmAQAAAAAEIABAAAYiBAAAAAAFEWAAAEAAAAAQ=</HashCode>
+      <FileName>GenreFilm.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
