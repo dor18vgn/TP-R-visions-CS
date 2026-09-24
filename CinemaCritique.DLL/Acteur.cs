@@ -96,6 +96,10 @@ namespace CinémaCritique.DLL
             return _dateNaissance;
         }
 
+        public List<Film> getLesFilms()
+        {
+            return lesFilms;
+        }
         public void SetDateNaissance(DateTime dateNaissance)
         {
             _dateNaissance = dateNaissance;
@@ -128,6 +132,8 @@ namespace CinémaCritique.DLL
         {
             if (lesFilms != null && !lesFilms.Contains(unFilm))
                 lesFilms.Add(unFilm);
+            if (unFilm != null && !unFilm.getLesActeurs().Contains(this))
+                unFilm.AddActeur(this);
         }
 
         #endregion

@@ -16,6 +16,7 @@ namespace CinémaCritique.DLL
         private List<Realisateur> lesRealisateurs = new List<Realisateur>();
         private float _note = 0;
         #endregion
+
         #region Propriétés
 
         public string nom
@@ -46,6 +47,7 @@ namespace CinémaCritique.DLL
         }
 
         #endregion
+
         #region Constructeurs
 
         public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateur> lesRealisateurs, float note)
@@ -59,6 +61,7 @@ namespace CinémaCritique.DLL
         }
 
         #endregion
+
         #region Accesseurs (getteurs / setteurs)
 
         public string getNom()
@@ -113,17 +116,22 @@ namespace CinémaCritique.DLL
         }
 
         #endregion
+
         #region Méthodes
 
         public void AddActeur(Acteur monActeur)
         {
             if (!lesActeurs.Contains(monActeur)) 
                      lesActeurs.Add(monActeur);
+            if (!monActeur.getLesFilms().Contains(this))
+                monActeur.AddFilm(this);
         }
         public void AddRealisateur(Realisateur monRealisateur)
         {
             if (!lesRealisateurs.Contains(monRealisateur))
                 lesRealisateurs.Add(monRealisateur);
+            if (!monRealisateur.getLesFilms().Contains(this))
+                monRealisateur.AddFilm(this);
         }
 
         public override String ToString()

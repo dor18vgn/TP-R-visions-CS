@@ -26,7 +26,7 @@ namespace CinémaCritique.AppliWinForms
          
             Film DonnieDarko = new Film("Donnie Darko", new DateTime(2001, 10, 26), "Américain", new List<Acteur> { JakeGyllenhaal }, new List<Realisateur> { RichardKelly }, 8.0f);
 
-         
+           
 
         }
     }

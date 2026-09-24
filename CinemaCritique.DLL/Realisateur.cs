@@ -17,6 +17,7 @@ namespace CinémaCritique.DLL
         private List<Film> lesFilms = new List<Film>();
 
         #endregion
+
         #region Propriétés
 
         public string nom
@@ -66,6 +67,7 @@ namespace CinémaCritique.DLL
             set { lesFilms = value; }
         }
         #endregion
+
         #region Constructeurs
 
         public Realisateur(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, string consecration, List<Film> lesFilms)
@@ -80,6 +82,7 @@ namespace CinémaCritique.DLL
         }
 
         #endregion
+
         #region Accesseurs (getteurs / setteurs)
 
         public string getNom()
@@ -153,12 +156,15 @@ namespace CinémaCritique.DLL
         }
 
         #endregion
+
         #region Méthodes
 
         public void AddFilm(Film monFilm)
         {
             if (!lesFilms.Contains(monFilm))
                 lesFilms.Add(monFilm);
+            if (!monFilm.getLesRealisateurs().Contains(this))
+                monFilm.AddRealisateur(this);
         }
 
 
