@@ -31,7 +31,12 @@ namespace CinémaCritique.DLL
         public DateTime dateNaissance
         {
             get { return _dateNaissance; }
-            set { _dateNaissance = value; }
+            set
+            {
+                if (value > DateTime.Now)
+                    throw new ArgumentOutOfRangeException(nameof(dateNaissance), "La date de naissance ne peut pas être dans le futur.");
+                _dateNaissance = value;
+            }
         }
 
         public string nationalite
