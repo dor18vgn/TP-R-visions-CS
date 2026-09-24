@@ -1,4 +1,7 @@
-﻿namespace CinémaCritique.DLL
+﻿using System;
+using System.Collections.Generic;
+
+namespace CinémaCritique.DLL
 {
     public class Acteur
     {

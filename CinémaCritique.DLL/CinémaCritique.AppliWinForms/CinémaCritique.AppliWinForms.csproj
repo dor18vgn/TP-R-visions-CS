@@ -76,11 +76,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CinémaCritique.DLL\CinémaCritique.DLL.csproj">
-      <Project>{528dcf22-506e-46a3-8502-a3ab5e74cee9}</Project>
-      <Name>CinémaCritique.DLL</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
