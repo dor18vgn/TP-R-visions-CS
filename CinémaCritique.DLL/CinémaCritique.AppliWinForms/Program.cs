@@ -21,9 +21,9 @@ namespace CinémaCritique.AppliWinForms
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
-            Acteur JakeGyllenhaal = new Acteur("Gyllenhaal", "Jake", new DateTime(1980, 12, 19), Nationalite.Americain, "Homme", new List<Film>());
-            Acteur RyanGosling = new Acteur("Gosling", "Ryan", new DateTime(1980, 11, 12), Nationalite.Americain, "Homme", new List<Film>());
-            Realisateur RichardKelly = new Realisateur("Kelly", "Richard", new DateTime(1970, 03, 24), Nationalite.Americain, "Homme", "Récompensé aux Oscars", new List<Film>());
+            Acteur JakeGyllenhaal = new Acteur("Gyllenhaal", "Jake", new DateTime(1980, 12, 19), Nationalite.Americain, Sexe.Homme, new List<Film>());
+            Acteur RyanGosling = new Acteur("Gosling", "Ryan", new DateTime(1980, 11, 12), Nationalite.Americain, Sexe.Homme, new List<Film>());
+            Realisateur RichardKelly = new Realisateur("Kelly", "Richard", new DateTime(1970, 03, 24), Nationalite.Americain, Sexe.Homme, "Récompensé aux Oscars", new List<Film>());
          
             Film DonnieDarko = new Film("Donnie Darko", new DateTime(2001, 10, 26), Nationalite.Americain, GenreFilm.Science_Fiction, new List<Acteur> { JakeGyllenhaal }, new List<Realisateur> { RichardKelly }, 8.0f);
 

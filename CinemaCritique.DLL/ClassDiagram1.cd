@@ -8,6 +8,7 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="nationalite" />
+      <Field Name="sexe" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="lesFilms" />
@@ -21,6 +22,7 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="nationalite" />
+      <Field Name="sexe" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="lesFilms" />
@@ -33,8 +35,8 @@
       <FileName>Film.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="genreFilm" />
       <Field Name="nationalite" />
+      <Field Name="genreFilm" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="lesActeurs" />
@@ -51,8 +53,15 @@
   <Enum Name="CinemaCritique.DLL.Nationalite">
     <Position X="11.25" Y="1.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>QRlXwQSCQAME1EDCqRkEgEgkACATpJoCYmD0LicEgKs=</HashCode>
+      <HashCode>goEY6QCEYQlQhCGMQAMCSSkAEhVAaFIGHAqCfEIkeDM=</HashCode>
       <FileName>Nationalite.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CinemaCritique.DLL.Sexe">
+    <Position X="3.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAACAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sexe.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
