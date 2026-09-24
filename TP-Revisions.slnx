@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="CinémaCritique.AppliWinForms/CinémaCritique.AppliWinForms.csproj" Id="4ad89bc5-8983-42c8-bbf1-8366b5cf24c3" />
-  <Project Path="CinémaCritique.DLL/CinémaCritique.DLL.csproj" />
+  <Project Path="CinémaCritique.DLL/CinémaCritique.AppliWinForms/CinémaCritique.AppliWinForms.csproj" Id="4ad89bc5-8983-42c8-bbf1-8366b5cf24c3" />
+  <Project Path="CinémaCritique.DLL/CinémaCritique.DLL/CinémaCritique.DLL.csproj" />
 </Solution>
