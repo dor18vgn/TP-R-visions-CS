@@ -13,7 +13,7 @@ namespace CinémaCritique.DLL
         private string _prenom = "inconnu";
         private DateTime _dateNaissance = DateTime.Now;
         private Nationalite nationalite = Nationalite.inconnu;
-        private string _sexe = "inconnu";
+        private Sexe sexe = Sexe.inconnu;
         private string _consecration = "inconnu";
         private List<Film> lesFilms = new List<Film>();
 
@@ -45,12 +45,6 @@ namespace CinémaCritique.DLL
         }
 
 
-        public string sexe
-        {
-            get { return _sexe; }
-            set { _sexe = value; }
-        }
-
         public string consecration
         {
             get { return _consecration; }
@@ -66,7 +60,7 @@ namespace CinémaCritique.DLL
 
         #region Constructeurs
 
-        public Realisateur(string nom, string prenom, DateTime dateNaissance, Nationalite nationalite, string sexe, string consecration, List<Film> lesFilms)
+        public Realisateur(string nom, string prenom, DateTime dateNaissance, Nationalite nationalite, Sexe sexe, string consecration, List<Film> lesFilms)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -109,9 +103,9 @@ namespace CinémaCritique.DLL
             return nationalite;
         }
 
-        public string getSexe()
+        public Sexe getSexe()
         {
-            return _sexe;
+            return sexe;
         }
 
         public string getConsecration()
@@ -144,7 +138,7 @@ namespace CinémaCritique.DLL
             this.nationalite = nationalite;
         }
 
-        public void setSexe(string sexe)
+        public void setSexe(Sexe sexe)
         {
             this.sexe = sexe;
         }

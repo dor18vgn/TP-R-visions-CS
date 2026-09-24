@@ -11,7 +11,7 @@ namespace CinémaCritique.DLL
         private string _prenom = "inconnu";
         private DateTime _dateNaissance = DateTime.Now;
         private Nationalite nationalite = Nationalite.inconnu;
-        private string _sexe = "inconnu";
+        private Sexe sexe = Sexe.inconnu;
         private List<Film> lesFilms = new List<Film>();
         #endregion
 
@@ -40,26 +40,18 @@ namespace CinémaCritique.DLL
             }
         }
 
-        
-
-        public string sexe
-        {
-            get { return _sexe; }
-            set { _sexe = value; }
-        }
-
 
         #endregion
 
         #region Constructeurs
 
-        public Acteur(string nom, string prenom, DateTime dateNaissance, Nationalite nationalite, string sexe, List<Film> lesFilms)
+        public Acteur(string nom, string prenom, DateTime dateNaissance, Nationalite nationalite, Sexe sexe, List<Film> lesFilms)
         {
             this._nom = nom;
             this._prenom = prenom;
             this._dateNaissance = dateNaissance;
             this.nationalite = nationalite;
-            this._sexe = sexe;
+            this.sexe = sexe;
             this.lesFilms = lesFilms;
             if (lesFilms != null)
             {
@@ -92,9 +84,9 @@ namespace CinémaCritique.DLL
         {
             return nationalite;
         }
-        public string getSexe()
+        public Sexe getSexe()
         {
-            return _sexe;
+            return sexe;
         }
         public List<Film> getLesFilms()
         {
@@ -118,9 +110,9 @@ namespace CinémaCritique.DLL
         {
             nationalite = nationalite;
         }
-        public void SetSexe(string sexe)
+        public void SetSexe(Sexe sexe)
         {
-            _sexe = sexe;
+            sexe = sexe;
         }
 
         #endregion
