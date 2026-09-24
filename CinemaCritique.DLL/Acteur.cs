@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaCritique.DLL;
+using System;
 using System.Collections.Generic;
 
 namespace CinémaCritique.DLL
@@ -9,7 +10,7 @@ namespace CinémaCritique.DLL
         private string _nom = "inconnu";
         private string _prenom = "inconnu";
         private DateTime _dateNaissance = DateTime.Now;
-        private string _nationalite = "inconnu";
+        private Nationalite nationalite = Nationalite.inconnu;
         private string _sexe = "inconnu";
         private List<Film> lesFilms = new List<Film>();
         #endregion
@@ -39,11 +40,7 @@ namespace CinémaCritique.DLL
             }
         }
 
-        public string nationalite
-        {
-            get { return _nationalite; }
-            set { _nationalite = value; }
-        }
+        
 
         public string sexe
         {
@@ -56,14 +53,22 @@ namespace CinémaCritique.DLL
 
         #region Constructeurs
 
-        public Acteur(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, List<Film> lesFilms)
+        public Acteur(string nom, string prenom, DateTime dateNaissance, Nationalite nationalite, string sexe, List<Film> lesFilms)
         {
             this._nom = nom;
             this._prenom = prenom;
             this._dateNaissance = dateNaissance;
-            this._nationalite = nationalite;
+            this.nationalite = nationalite;
             this._sexe = sexe;
             this.lesFilms = lesFilms;
+            if (lesFilms != null)
+            {
+                foreach (Film film in lesFilms)
+                {
+                    if (!film.getLesActeurs().Contains(this))
+                        film.AddActeur(this);
+                }
+            }
         }
 
         
@@ -75,49 +80,43 @@ namespace CinémaCritique.DLL
         {
             return _nom;
         }
+        public string GetPrenom()
+        {
+            return _prenom;
+        }
+        public DateTime GetDateNaissance()
+        {
+            return _dateNaissance;
+        }
+        public Nationalite GetNationalite()
+        {
+            return nationalite;
+        }
+        public string getSexe()
+        {
+            return _sexe;
+        }
+        public List<Film> getLesFilms()
+        {
+            return lesFilms;
+        }
+
 
         public void SetNom(string nom)
         {
             _nom = nom;
         }
-
-        public string GetPrenom()
-        {
-            return _prenom;
-        }
-
         public void SetPrenom(string prenom)
         {
             _prenom = prenom;
-        }
-
-        public DateTime GetDateNaissance()
-        {
-            return _dateNaissance;
-        }
-
-        public List<Film> getLesFilms()
-        {
-            return lesFilms;
         }
         public void SetDateNaissance(DateTime dateNaissance)
         {
             _dateNaissance = dateNaissance;
         }
-
-        public string GetNationalite()
+        public void SetNationalite(Nationalite nationalite)
         {
-            return _nationalite;
-        }
-
-        public void SetNationalite(string nationalite)
-        {
-            _nationalite = nationalite;
-        }
-
-        public string GetSexe()
-        {
-            return _sexe;
+            nationalite = nationalite;
         }
         public void SetSexe(string sexe)
         {

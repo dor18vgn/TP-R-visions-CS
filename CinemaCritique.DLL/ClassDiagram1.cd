@@ -3,9 +3,12 @@
   <Class Name="CinémaCritique.DLL.Acteur">
     <Position X="3" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>gCAIAAABAAAQMgAAAAAAIAACBAAAIAACECAAgAAQACI=</HashCode>
+      <HashCode>gAAIAAAhAAAQMgAAAAAAIAACBAAAIAACECAAgAEQACI=</HashCode>
       <FileName>Acteur.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="nationalite" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="lesFilms" />
     </ShowAsCollectionAssociation>
@@ -16,6 +19,9 @@
       <HashCode>AAEAIoAgCAAQIhAAACAAIAAAFCAQIgIAEAAIggEwAAI=</HashCode>
       <FileName>Realisateur.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="nationalite" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="lesFilms" />
     </ShowAsCollectionAssociation>
@@ -23,11 +29,12 @@
   <Class Name="CinémaCritique.DLL.Film">
     <Position X="5.75" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AQAwIIAgCAAwAAAEAEAAIAAAJAAAGpAEAAECiAAQAAE=</HashCode>
+      <HashCode>AQAwIIAgCAAgAAAEAEAAJAAAJAAAGpAEAAECiEAQAAE=</HashCode>
       <FileName>Film.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="genreFilm" />
+      <Field Name="nationalite" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="lesActeurs" />
@@ -39,6 +46,13 @@
     <TypeIdentifier>
       <HashCode>AAAACAmAQAAAAAEIABAAAYiBAAAAAAFEWAAAEAAAAAQ=</HashCode>
       <FileName>GenreFilm.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CinemaCritique.DLL.Nationalite">
+    <Position X="11.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QRlXwQSCQAME1EDCqRkEgEgkACATpJoCYmD0LicEgKs=</HashCode>
+      <FileName>Nationalite.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

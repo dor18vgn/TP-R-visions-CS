@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaCritique.DLL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,7 +11,7 @@ namespace CinémaCritique.DLL
 
         private string _nom = "inconnu";
         private DateTime _dateCreation = DateTime.Now;
-        private string _nationalite = "inconnu";
+        private Nationalite nationalite = Nationalite.inconnu;
         private GenreFilm genreFilm = GenreFilm.inconnu;
         private List<Acteur> lesActeurs = new List<Acteur>();
         private List<Realisateur> lesRealisateurs = new List<Realisateur>();
@@ -29,11 +30,7 @@ namespace CinémaCritique.DLL
             get { return _dateCreation; }
             set { _dateCreation = value; }
         }
-        public string nationalite
-        {
-            get { return _nationalite; }
-            set { _nationalite = value; }
-        }
+      
 
         public float note
         {
@@ -50,14 +47,31 @@ namespace CinémaCritique.DLL
 
         #region Constructeurs
 
-        public Film(string nom, DateTime dateCreation, string nationalite, List<Acteur> lesActeurs, List<Realisateur> lesRealisateurs, float note)
+        public Film(string nom, DateTime dateCreation, Nationalite nationalite, GenreFilm genreFilm,List<Acteur> lesActeurs, List<Realisateur> lesRealisateurs, float note)
         {
             this.nom = nom;
             this.dateCreation = dateCreation;
             this.nationalite = nationalite;
+            this.genreFilm = genreFilm;
             this.lesActeurs = lesActeurs;
             this.lesRealisateurs = lesRealisateurs;
             this.note = note;
+            if (lesActeurs != null)
+            {
+                foreach (Acteur acteur in lesActeurs)
+                {
+                    if (!acteur.getLesFilms().Contains(this))
+                        acteur.AddFilm(this);
+                }
+            }
+            if (lesRealisateurs != null)
+            {
+                foreach (Realisateur realisateur in lesRealisateurs)
+                {
+                    if (!realisateur.getLesFilms().Contains(this))
+                        realisateur.AddFilm(this);
+                }
+            }
         }
 
         #endregion
@@ -73,9 +87,14 @@ namespace CinémaCritique.DLL
             return _dateCreation;
         }
 
-        public string getNationalite()
+        public Nationalite getNationalite()
         {
-            return _nationalite;
+            return nationalite;
+        }
+
+        public GenreFilm getGenreFilm()
+        {
+            return genreFilm;
         }
         public List<Acteur> getLesActeurs()
         {
@@ -98,9 +117,14 @@ namespace CinémaCritique.DLL
         {
             this.dateCreation = dateCreation;
         }
-        public void setNationalite(string nationalite)
+        public void setNationalite(Nationalite nationalite)
         {
             this.nationalite = nationalite;
+        }
+
+        public void setGenreFilm(GenreFilm genreFilm)
+        {
+            this.genreFilm = genreFilm;
         }
         public void setLesActeurs(List<Acteur> lesActeurs)
         {

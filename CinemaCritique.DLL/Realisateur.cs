@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaCritique.DLL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,7 +12,7 @@ namespace CinémaCritique.DLL
         private string _nom = "inconnu";
         private string _prenom = "inconnu";
         private DateTime _dateNaissance = DateTime.Now;
-        private string _nationalite = "inconnu";
+        private Nationalite nationalite = Nationalite.inconnu;
         private string _sexe = "inconnu";
         private string _consecration = "inconnu";
         private List<Film> lesFilms = new List<Film>();
@@ -43,11 +44,6 @@ namespace CinémaCritique.DLL
             }
         }
 
-        public string nationalite
-        {
-            get { return _nationalite; }
-            set { _nationalite = value; }
-        }
 
         public string sexe
         {
@@ -70,7 +66,7 @@ namespace CinémaCritique.DLL
 
         #region Constructeurs
 
-        public Realisateur(string nom, string prenom, DateTime dateNaissance, string nationalite, string sexe, string consecration, List<Film> lesFilms)
+        public Realisateur(string nom, string prenom, DateTime dateNaissance, Nationalite nationalite, string sexe, string consecration, List<Film> lesFilms)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -79,6 +75,14 @@ namespace CinémaCritique.DLL
             this.sexe = sexe;
             this.consecration = consecration;
             this.lesFilms = lesFilms;
+            if (lesFilms != null)
+            {
+                foreach (Film film in lesFilms)
+                {
+                    if (!film.getLesRealisateurs().Contains(this))
+                        film.AddRealisateur(this);
+                }
+            }
         }
 
         #endregion
@@ -100,9 +104,9 @@ namespace CinémaCritique.DLL
             return _dateNaissance;
         }
 
-        public string getNationalite()
+        public Nationalite getNationalite()
         {
-            return _nationalite;
+            return nationalite;
         }
 
         public string getSexe()
@@ -135,7 +139,7 @@ namespace CinémaCritique.DLL
             this.dateNaissance = dateNaissance;
         }
 
-        public void setNationalite(string nationalite)
+        public void setNationalite(Nationalite nationalite)
         {
             this.nationalite = nationalite;
         }
